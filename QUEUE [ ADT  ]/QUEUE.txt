@@ -1,0 +1,49 @@
+DECLARE queue : ARRAY[1:10] OF INTEGER
+DECLARE rearp, frontp queueful, queuelength INTEGER
+
+frontp ← 1
+rearp ← 0
+upperb ← 10
+queueful ← 10
+queuelength ← 0
+
+/ ENQUEUE 
+
+IF queuelength < queueful 
+	THEN
+		IF rearp < upperb
+			THEN
+				rearp +=1
+		ELSE
+			rearp = 1
+
+		ENDIF
+
+		queuelength +=1
+		queue[rearp] ← item
+	
+	ELSE 
+		OUTPUT " QUEUE IF FULL "
+ENDIF
+
+/DEQUEUE
+
+
+IF queuelength ==  0
+	THEN 
+		OUTPUT " QUEUE IS EMPTY "
+
+	ELSE
+		item ← queue[frontp]
+		IF frontp == upperb
+			THEN
+				frontp ← 1
+			ELSE
+				frontp +=1
+		ENDIF
+		queue -=1
+
+ENDIF
+
+
+
