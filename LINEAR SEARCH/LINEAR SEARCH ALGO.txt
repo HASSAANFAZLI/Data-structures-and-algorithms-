@@ -1,0 +1,30 @@
+DECLARE mylist : ARRAY[0:9] OF INTEGERS 
+DECLARE upperb, lowerb, index, item : INTEGERS
+DECLARE found : BOOLEAN
+
+upperb ← 9 
+lowerb ← 0
+OUTPUT "ENTER ITEM TO BE FOUND"
+INPUT ITEM
+
+found ← FALSE
+INDEX ← lowerb
+
+REPEAT
+	IF ITEM = mylist[index]
+		THEN
+			found ← TRUE
+	ENDIF
+	index ← index + 1
+UNTIL (found = TRUE) OR (index > upperb)
+
+IF FOUND == TRUE
+	THEN
+		OUTPUT " ITEM FOUND"
+	ELSE
+		OUTPUT " ITEM NOT FOUND"
+ENDIF
+
+
+
+
