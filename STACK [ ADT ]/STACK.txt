@@ -1,0 +1,36 @@
+DECLARE stack : ARRAY[1:10] OF INTEGERS 
+DECLARE toppointer : INTEGER
+DECLARE basepointer : INTEGER
+DECLARE stackful : INTGER
+
+basepointer  ← 1
+toppointer  ← 0 
+stackful ← 10
+
+
+/ TO PUSH A ELEMENT
+
+IF toppointer < stackful
+	THEN
+		toppointer  ← toppinter + 1
+		stack[toppointer]  ← item
+	ELSE
+		OUTPUT " STACK IS FULL "
+ENDIF
+
+/ TO POP  AN ELEMENT
+
+IF toppointer = basepointer - 1
+	THEN
+		OUTPUT " STACK EMPTY "
+	ELSE
+		item  ← stack[toppointer]
+		toppointer  ← toppointer - 1
+
+ENDIF
+
+
+
+
+
+
